@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocktails project</title>
+  <style>
+    body{
+      background: #d1d1d1;
+    }
+  </style>
+   <!--  Bootstrap CSS CDN link -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="container p-5">
+    <nav class="navbar navbar-expand-lg"  style="background-color: #e3f2fd;">
+  <div class="container-fluid p-4">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">Practice API</a>
+    <!-- Responsive collapse button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <!-- Menu Bar -->
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+       <!-- Menu Items -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link disabled">cocktail DB</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="phone.html">Mobile Phone</a>
+        </li>
+
+      </ul>
+
+      
+      <!-- Search Field -->
+      <div class="d-flex" role="search">
+        <input id="search-field" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button id="btn-search" class="btn btn-outline-primary" type="submit">Search</button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+  </header>
+  
+
+    
+
+<!-- Main Section -->
+<main class="container">
+ <!--Display phone Container -->
+  <section>
+       <div id="cocktails-container" class="row row-cols-1 row-cols-md-3 g-4">
+
+        </div>
+
+
+    <!-- Warning Text -->
+        <!-- <div id="no-found" class="mt-5 d-none">
+          <h3 class="text-secondary">No Phone Found. Please Try a New Search</h3>
+        </div> -->
+
+        <!--Show All Button  -->
+        <div id="show-all" class="text-center d-none mt-4">
+          <div id="show-all -btn" class="btn btn-primary">Show All</div>
+        </div>
+       
+  </section>
+
+  <!-- Loading the page-->
+  <section id="loader" class="d-none">
+    <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+  </section>
+
+
+
+    <!-- Modal Contents -->
+  <section>
+<div class="modal fade" id="cocktailDetailModal" tabindex="-1" aria-labelledby="cocktailDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cocktailDetailModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="cocktail-details" class="modal-body"> </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+
+
+  <!-- feedback -->
+  <section class="container">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <!-- <div class="carousel-body">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+</div>
+  </section>
+
+</main>
+
+    <!-- Bootstrap JS CDN link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+  <script src="cocktail.js"></script>
+</body>
+</html>
